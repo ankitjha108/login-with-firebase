@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:autofillHints="emailAddress"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:autofillHints="password"
+        android:ems="10"
+        android:hint="Phone No."
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toStartOf="@+id/verify"
+        app:layout_constraintStart_toStartOf="@+id/etSEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/etSEmailAddress" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:text="Verify Phone"
+        app:layout_constraintBottom_toBottomOf="@+id/etPhone"
+        app:layout_constraintEnd_toEndOf="@+id/etSEmailAddress"
+        app:layout_constraintStart_toEndOf="@+id/etPhone"
+        app:layout_constraintTop_toTopOf="@+id/etPhone" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/OptVerify"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:autofillHints="password"
+        android:ems="10"
+        android:hint="Enter OTP"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/Submit"
+        app:layout_constraintStart_toStartOf="@+id/etPhone"
+        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:text="Verify"
+        app:layout_constraintBottom_toBottomOf="@+id/OptVerify"
+        app:layout_constraintEnd_toEndOf="@+id/etSEmailAddress"
+        app:layout_constraintStart_toEndOf="@+id/OptVerify"
+        app:layout_constraintTop_toTopOf="@+id/OptVerify" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:autofillHints="password"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/etSEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/etSEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/OptVerify" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSConfPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:autofillHints="password"
+        android:ems="10"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="@+id/etSPassword"
+        app:layout_constraintStart_toStartOf="@+id/etSPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etSPassword"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSSigned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/black"
+        android:text="@string/signed"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/etSConfPassword"
+        app:layout_constraintStart_toStartOf="@+id/etSConfPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etSConfPassword" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRedirectLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/already_have_an_account_login"
+        android:textColor="#18206F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSSigned" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

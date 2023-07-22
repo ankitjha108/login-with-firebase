@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Login With Firebase</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="signed">signed</string>
+    <string name="already_have_an_account_login">already have an account login</string>
+    <string name="don_t_have_an_account_sign_in">dont have an account sign in</string>
+    <string name="login">login</string>
+</resources>
